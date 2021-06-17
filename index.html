@@ -33,51 +33,64 @@ a {
     color: blue;
    }
 		
-s:hover {
-    color: #800000;
-    text-decoration: red;
-   }
-o{
-   color: white;
-   font-size: 30%;
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+.top-menu {
+  background: rgba(255,255,255,.5);
+  box-shadow: 3px 0 7px rgba(0,0,0,.3);
+  padding: 20px;
 }
-/* The sidebar menu */
-.sidenav {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 200px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #111; /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
+.top-menu:after {
+  content: "";
+  display: table;
+  clear: both;
 }
-
-/* The navigation menu links */
-.sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
+.navbar-logo {display: inline-block;}
+.menu-main {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
 }
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-    color: #f1f1f1;
+.menu-main li {display: inline-block;}
+.menu-main a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  line-height: 61px;
+  padding-left: 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-family: 'Arimo', sans-serif;
+  font-weight: bold;
+  color: #F73E24;
+  transition:.3s linear;
 }
-
-/* Style page content */
-.main {
-    margin-left: 160px; /* Same as the width of the sidebar */
-    padding: 0px 10px;
+.menu-main a:before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background: #F73E24;
+  position: absolute;
+  left: 50%;
+  transform: rotate(45deg) translateX(6.5px);
+  opacity: 0;
+  transition: .3s linear;
 }
-
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+.menu-main a:hover:before {opacity: 1;}
+@media (max-width: 660px) {
+.menu-main {
+  float: none;
+  padding-top: 20px;
+}
+.top-menu {
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+.menu-main a {padding: 0 10px;}
+.menu-main a:before {transform: rotate(45deg) translateX(-6px);}
+}
+@media (max-width: 600px) {
+.menu-main li {display: block;}
 }
 </style>
 </ul>
@@ -86,15 +99,17 @@ o{
 <p>         Приватный ванильный ролеплей майнкрафт сервер на версии 1.16.5 без привелегий и приватов!
 <p>         Ip: potatomine.gomc.fun (для игры требуется проходка. Узнать подробнее можно <a href="https://discord.gg/HTxKBh5y8n">ТУТ</a>)</p>
 <!-- Side navigation -->
-<div class="sidenav">
-  <a href="#">Главная</a>
-  <a href="http://f19.joinserver.ru:25771/#">Онлайн карта</a>
-  <a href="timeline.html">Таймлайн</a>
-  <a href="https://vk.com/potato.mine">Вконтакте</a>
-  <a href="https://discord.gg/HTxKBh5y8n">Дискорд</a>
-  <p></p>
-  <o>©PotatoMine 2021</o>
-</div>
+<nav class="top-menu">
+  <a class="navbar-logo" href=""><img src="https://html5book.ru/wp-content/uploads/2017/04/lily-logo.png"></a>
+  <ul class="menu-main">
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="new.html">Новости</a></li>
+    <li><a href="timelaps.html">События</a></li>
+    <li><a href="">Онлайн карта</a></li>
+    <li><a href="buy">Купить проходку</a></li>
+
+  </ul>
+</nav>
 
 <!-- Page content -->
 <div class="main">
