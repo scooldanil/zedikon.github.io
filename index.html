@@ -97,13 +97,12 @@ $(function() {
     document.execCommand("copy");
     $temp.remove();
   }
-
+	
   // copy coupone code to clipboard
-  $(".ip-btn").on("click", function() {
-    copyToClipboard("potatomine.gomc.fun");
+  $(".coupon-btn").on("click", function() {
+    copyToClipboard("#coupon-field");
   });
 });
-
 </script>
 <ul class="menu-main">
   <li><a href="index.html" class="current">Главная</a></li>
@@ -116,12 +115,15 @@ $(function() {
 <p>Приватный ванильный ролеплей майнкрафт сервер на версии 1.16.5 без привелегий и приватов!
 <p>Ip: potatomine.gomc.fun (для игры требуется проходка. Узнать подробнее можно <a href="https://discord.gg/HTxKBh5y8n">ТУТ</a>)</p>
 <!-- Side navigation -->
-<div class="ip">
-  <div class="ip-row">
-    <p class="ip-field" id="coupon-field">potatomine.gomc.fun</p>
+<div class="coupon">
+  <div class="coupon-row">
+    <p class="coupon-field" id="coupon-field">potatomine.gomc.fun</p>
   </div>
-  <button class="ip-btn">Копировать IP</button>
+  <button class="coupon-btn">Copy</button>
 </div>
+<!-- for test -->
+<p>Isert text from clipboard</p>
+<input type="text">
 <!-- Page content -->
 <div class="main">
 </div>
