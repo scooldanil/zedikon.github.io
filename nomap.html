@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>PotatoMine?</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+<script type='text/javascript'>
+if(window.innerWidth<600)
+    location.href='http://potatomine.tk/mobile.html';
+</script>
+<style>
+   body{
+    background: url("https://sun9-67.userapi.com/impg/xZwfe40fXF1okhkpgfvX3TcZNpG2FLgkmBpWBA/7vOj9-m9BZg.jpg?size=1280x720&quality=96&sign=1416bfb5462d18402beb9691c2bb92fd&type=album") no-repeat;
+    -moz-background-size: 100%;
+    -webkit-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 300%;
+   }
+   
+   h1{
+   font-family: 'Source Sans Pro', sans-serif;
+   color: white;
+   font-size: 250%;
+	}
+	
+p{
+   color: white;
+   font-size: 45%;
+}  
+
+a {
+    text-decoration: none;
+    color: blue;
+   }
+		
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+.menu-main {
+  list-style: none;
+  margin: 40px 0 5px;
+  padding: 25px 0 5px;
+  text-align: center;
+  background: black;
+}
+.menu-main li {display: inline-block;}
+.menu-main li:after {
+  content: "";
+  color: white;
+  display: inline-block;
+  vertical-align:top;
+}
+.menu-main li:last-child:after {content: none;}
+.menu-main a {
+  text-decoration: none;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0 34px 0 30px;
+  font-size: 17px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: color .2s;
+}
+.menu-main a, .menu-main a:visited {color: #9d999d;}
+.menu-main a.current, .menu-main a:hover{color: #cfc9c6;}
+.menu-main a:before,
+.menu-main a:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  top: auto;
+  right: 50%;
+  bottom: -5px;
+  left: 50%;
+  background: #cfc9c6;
+  transition: .8s;
+}
+.menu-main a:hover:before, .menu-main .current:before {left: 0;}
+.menu-main a:hover:after, .menu-main .current:after {right: 0;}   
+@media (max-width: 550px) {
+.menu-main {padding-top: 0;}
+.menu-main li {display: block;}
+.menu-main li:after {content: none;}
+.menu-main a {
+  padding: 25px 0 20px; 
+  margin: 0 30px;
+}
+}
+</style>
+<ul class="menu-main">
+  <li><a href="index.html" class="current">Главная</a></li>
+  <li><a href="timeline.html">События</a></li>
+  <li><a href="nomap.html">Онлайн карта</a></li>
+  <li><a href="https://discord.gg/VWUbRqvfjF">Дискорд</a></li>
+</ul>
+<center>
+<h1>PotatoMine<h1>
+  <p>Извините, но мы работаем над онлайн картой поэтому она временно недоступна!</p>
+<!-- Side navigation -->
+<!-- for test -->
+<!-- Page content -->
+<div class="main">
+</div>
+
+</center>
+</body>
+</html>
